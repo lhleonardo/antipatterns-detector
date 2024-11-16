@@ -30,6 +30,9 @@ public class Microservice {
     @Column
     private String name;
 
+    @Column
+    private String alias;
+
     @ElementCollection
     @CollectionTable(name = "microservice_metadata", joinColumns = @JoinColumn(name = "microservice_id"))
     @MapKeyColumn(name = "meta_key")

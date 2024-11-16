@@ -31,6 +31,7 @@ public class MicroserviceController {
     public void register(@RequestBody RegisterMicroserviceApiDto registerMicroserviceApiDto) {
         this.registerMicroserviceUsecase.execute(
                 registerMicroserviceApiDto.getName(),
+                registerMicroserviceApiDto.getAlias(),
                 registerMicroserviceApiDto.getAddresses(),
                 registerMicroserviceApiDto.getMetadata());
     }

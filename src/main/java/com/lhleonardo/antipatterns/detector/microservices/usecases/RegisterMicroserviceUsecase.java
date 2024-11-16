@@ -19,11 +19,12 @@ public class RegisterMicroserviceUsecase {
     private final MicroserviceRepository microserviceRepository;
 
     @Transactional
-    public void execute(String name, List<String> addresses, Map<String, String> metadata) {
+    public void execute(String name, String alias, List<String> addresses, Map<String, String> metadata) {
         Microservice microservice = new Microservice();
         microservice.setName(name);
         microservice.setAddresses(addresses);
         microservice.setMetadata(metadata);
+        microservice.setAlias(alias);
         microservice.setIdentifier(UUID.randomUUID().toString());
 
         this.microserviceRepository.save(microservice);

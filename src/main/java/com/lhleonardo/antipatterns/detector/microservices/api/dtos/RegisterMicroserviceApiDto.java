@@ -9,6 +9,7 @@ import lombok.Data;
 public class RegisterMicroserviceApiDto {
 
     private String name;
+    private String alias;
     private List<String> addresses;
     private Map<String, String> metadata;
 
